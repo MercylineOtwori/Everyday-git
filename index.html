@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everyday Git</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+    }
+    figcaption {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Everyday Git</h1>
+
+  <section>
+    <h2>1. Get Started</h2>
+    <p>Set up your development environment by creating a folder named <strong>everyday-git</strong>. Inside it, create an <code>index.html</code> file and an <code>images</code> folder for storing screenshots.</p>
+  </section>
+
+  <section>
+    <h2>2. What is Git?</h2>
+    <p>Git is a <strong>version control system</strong> used to track changes in source code. Version control systems allow developers to collaborate and manage code history. Other examples include Subversion, Mercurial, and CVS. In this blog, we’ll focus on Git and GitHub.</p>
+  </section>
+
+  <section>
+    <h2>3. Installing Git</h2>
+    <p>Check if Git is installed:</p>
+    <pre><code>git --version</code></pre>
+    <figure>
+      <img src="images/git-version.png" alt="Checking Git version" />
+      <figcaption>Command to check if Git is installed</figcaption>
+    </figure>
+    <p>If not installed, download Git from <a href="https://git-scm.com">git-scm.com</a> and follow the installation instructions for your OS.</p>
+  </section>
+
+  <section>
+    <h2>4. Configuring Git</h2>
+    <pre><code>git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"</code></pre>
+    <figure>
+      <img src="images/git-config.png" alt="Configuring Git" />
+      <figcaption>Configuring Git with username and email</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>5. Initializing a Git Repository</h2>
+    <p>Initialize a Git repository in your project directory:</p>
+    <pre><code>git init</code></pre>
+    <figure>
+      <img src="images/git-init.png" alt="Git init command" />
+      <figcaption>Initializing a Git repository</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>6. Adding Files to the Staging Area</h2>
+    <p>The staging area holds changes before a commit. Tracked files are monitored by Git, while untracked files are not.</p>
+    <pre><code>git add index.html
+git add .</code></pre>
+    <figure>
+      <img src="images/git-add.png" alt="Adding files to staging area" />
+      <figcaption>Adding files to staging area</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>7. Committing Changes</h2>
+    <pre><code>git commit -m "Initial commit"</code></pre>
+    <p>Good commit messages are short and descriptive.</p>
+    <pre><code>git log</code></pre>
+    <pre><code>git checkout &lt;commit_hash&gt;</code></pre>
+    <figure>
+      <img src="images/git-commit.png" alt="Committing changes" />
+      <figcaption>Committing changes</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>8. Branches</h2>
+    <p>Branches allow you to work on different features without affecting the main codebase. They’re important for collaboration and feature testing.</p>
+  </section>
+
+  <section>
+    <h2>9. Creating a Branch</h2>
+    <pre><code>git branch new-feature</code></pre>
+    <figure>
+      <img src="images/git-branch.png" alt="Creating a branch" />
+      <figcaption>Creating a new branch</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>10. Viewing All Branches</h2>
+    <pre><code>git branch</code></pre>
+    <figure>
+      <img src="images/git-branch-list.png" alt="Viewing branches" />
+      <figcaption>Listing all branches</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>11. Switching Active Branches</h2>
+    <pre><code>git checkout new-feature</code></pre>
+    <figure>
+      <img src="images/git-checkout.png" alt="Switching branches" />
+      <figcaption>Switching to a different branch</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>12. Merging a Branch</h2>
+    <pre><code>git checkout main
+git merge new-feature</code></pre>
+    <figure>
+      <img src="images/git-merge.png" alt="Merging branches" />
+      <figcaption>Merging a branch into main</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>13. Deleting a Branch</h2>
+    <pre><code>git branch -d new-feature</code></pre>
+    <figure>
+      <img src="images/git-delete-branch.png" alt="Deleting a branch" />
+      <figcaption>Deleting a branch</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>14. Next Steps</h2>
+    <p>Next, learn how to use <strong>GitHub</strong> for remote repositories, and try using commands like <code>git push</code>, <code>git pull</code>, <code>git clone</code>. Explore GUIs like GitHub Desktop or use Git with Visual Studio Code.</p>
+  </section>
+
+  <section>
+    <h2>15. Deploy Your Page</h2>
+    <p>Deploy using <strong>GitHub Pages</strong> or <strong>Vercel</strong>:</p>
+    <ul>
+      <li>GitHub Pages: Push to GitHub, go to Repo Settings > Pages > Deploy from main branch</li>
+      <li>Vercel: Connect your GitHub repo and deploy directly</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>16. Congratulations!</h2>
+    <p>You've successfully created and deployed your Everyday Git blog. Happy Git-ing! 🎉</p>
+  </section>
+
+</body>
+</html>
